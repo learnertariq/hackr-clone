@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="flex">
+          <div class="left flex__item flex">
+            <img
+              class="img hamvurguer-img img--3x pointer"
+              src="./assets/hamburguer.svg"
+              alt=""
+            />
+            <img
+              class="img logo-img img--10x ml-1"
+              src="./assets/logo-new.svg"
+              alt=""
+            />
+
+            <div class="list nav__list ml-1">
+              <a class="list-item nav__item link" href="#">Programming</a>
+              <a class="list-item nav__item link" href="#">Data Science</a>
+              <a class="list-item nav__item link" href="#">Dev Ops</a>
+              <a class="list-item nav__item link" href="#">Design</a>
+            </div>
+          </div>
+
+          <div class="right flex__item flex">
+            <div class="search-container pointer">
+              <img
+                class="img search-img img--2x"
+                src="./assets/search-header.svg"
+                alt=""
+              />
+            </div>
+            <a href="#" class="btn btn--primary btn--small ml-1 link">Login</a>
+          </div>
+        </div>
+
+        <div class="list nav__list nav__list--sm nav--collapse ml-1">
+          <a class="list-item nav__item link" href="#">Programming</a>
+          <a class="list-item nav__item link" href="#">Data Science</a>
+          <a class="list-item nav__item link" href="#">Dev Ops</a>
+          <a class="list-item nav__item link" href="#">Design</a>
+        </div>
+      </nav>
+    </header>
+
+    <hr>
+
+    <script>
+      const ham = document.getElementsByClassName("hamvurguer-img")[0];
+      const navListSmall = document.getElementsByClassName("nav__list--sm")[0];
+      ham.addEventListener("click", () => {
+        navListSmall.classList.toggle("nav--collapse");
+      });
+    </script>
+  </body>
+</html>
